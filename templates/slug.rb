@@ -17,6 +17,8 @@
 
 class Slug < ActiveRecord::Base
   belongs_to :sluggable, polymorphic: true
+  
+  attr_accessible :sluggable, :slug, :active, :scope
 
   scope :for, ->(object_or_type, object_id=nil) {
     object_type = object_id ? object_or_type : object_or_type.class.to_s
