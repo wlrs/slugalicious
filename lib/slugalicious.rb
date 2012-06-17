@@ -18,7 +18,7 @@ module Slugalicious
   MAX_SLUG_LENGTH = 126
 
   included do
-    alias_method :to_param, :slug_with_path
+    #alias_method :to_param, :slug_with_path
     has_many :slugs, as: :sluggable, dependent: :delete_all
   end
 
