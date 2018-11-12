@@ -1,18 +1,16 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # DEPENDENCIES
-gem 'rails', '>= 3.1'
+gem 'rails', '>= 5.0.0'
 gem 'stringex'
 
 # DEVELOPMENT
 group :development do
-  gem 'jeweler'
+  gem 'juwelier'
   gem 'yard'
+  gem 'redcarpet'
   gem 'RedCloth', require: 'redcloth'
   gem 'sqlite3'
   gem 'rspec'
-end
-
-group :test do
-  gem 'factory_girl'
+  gem 'factory_bot'
 end
